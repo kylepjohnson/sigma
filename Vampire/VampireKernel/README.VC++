@@ -1,0 +1,17 @@
+
+
+Visual Studio project for vkernel.lib : 
+./VKLibrary_VSProject/VKLibrary_VSProject.dsp
+
+Visual Studio workspace for vkernel.exe : 
+./ VKStandalone_VSWorkspace/VKStandalone_VSWorkspace.dsw
+
+
+MEMO: To compile with Visual C++ 6.0:
+1) Set the compiler option /Zm300 
+(to relax the default memory usage restrictions).
+2) Link with ws2_32.lib
+3) Tell the preprocessor where to look for BlodKorv and Gematogen files
+(and PR_PARSER, if the standalone executable is being built).
+
+See also PR_PARSER/README.VC++ 

@@ -1,0 +1,12 @@
+To create the source code for the parser, use flex and bison 
+on a Linux or Solaris machine. In order to compile it with VC++,
+comment out the line with #include <unistd.h> in pr_scanner.incl . 
+
+
+
+
+
+
+
+
+

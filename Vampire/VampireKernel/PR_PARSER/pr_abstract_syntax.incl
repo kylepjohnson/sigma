@@ -1,0 +1,123 @@
+#include "pr_abstract_syntax.hpp"
+ 
+//************** Definitions for PR_TERM_LIST: ***************
+
+PR_TERM* PR_TERM_LIST::Nth(PR_TERM_LIST* lst,int n)
+ {
+  while (n>0)
+   {
+    lst = lst->Next();
+    n--;
+   };
+  return lst->Term(); 
+ }; // PR_TERM* PR_TERM_LIST::Nth(PR_TERM_LIST* lst,int n)
+ 
+void PR_TERM_LIST::Inverse(PR_TERM_LIST*& lst)
+ {
+  if (lst)
+   {
+    PR_TERM_LIST* prev = lst;
+    PR_TERM_LIST* rest = lst->Next();
+    PR_TERM_LIST* tmp;
+    prev->next = (PR_TERM_LIST*)0;
+    while (rest)
+     {
+      tmp = rest;
+      rest = rest->Next();
+      tmp->next = prev;
+      prev = tmp;
+     };
+    lst = prev;
+   };
+ }; // void PR_TERM_LIST::Inverse(PR_TERM_LIST*& lst)
+
+int PR_TERM_LIST::Length(PR_TERM_LIST* lst)
+ {
+  if (lst)
+   {
+    return Length(lst->next) + 1;
+   }
+  else return 0; 
+ }; // int PR_TERM_LIST::Length(PR_TERM_LIST* lst)
+ 
+void PR_TERM_LIST::Output(PR_TERM_LIST* lst)
+ {
+  while (lst)
+   {
+    lst->term->Output();
+    lst = lst->next;
+    if (lst) { std::cout << ","; };
+   };
+ }; // void PR_TERM_LIST::Output(PR_TERM_LIST* lst)
+ 
+//************** Definitions for PR_TERM: ***************************** 
+
+void PR_TERM::Output()
+ { 
+  if (tag == LIST)
+   {
+    std::cout << "[";
+    PR_TERM_LIST::Output(arguments);
+    std::cout << "]";
+   }
+  else
+   {
+    symbol->Output();
+    if (arguments)
+     {
+      std::cout << "(";
+      PR_TERM_LIST::Output(arguments);
+      std::cout << ")";
+     };
+   };
+ }; // void PR_TERM::Output() 
+ 
+//************** Definitions for PR_LITERAL: *****************************  
+ 
+
+void PR_LITERAL::Output()
+ {
+  header->Output();
+  if (arguments)
+   {
+    std::cout << "(";
+    PR_TERM_LIST::Output(arguments);
+    std::cout << ")";
+   };
+ }; // void PR_LITERAL::Output() 
+ 
+
+//************** Definitions for PR_LITERAL_LIST: ***********************  
+ 
+void PR_LITERAL_LIST::Output(PR_LITERAL_LIST* lst)
+ {
+  while (lst)
+   {
+    lst->literal->Output();
+    std::cout << "\n";
+    lst = lst->next;
+   };
+ }; // void PR_LITERAL_LIST::Output(PR_LITERAL_LIST* lst) 
+  
+  
+  
+  
+  
+  
+  
+  
+//**********************************************************************  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
