@@ -1,0 +1,278 @@
+<!DOCTYPE Project SYSTEM "http://www.slickedit.com/dtd/vse/8.1/vpj.dtd">
+<Project
+	Version="8.1"
+	VendorName="SlickEdit"
+	WorkingDir=".">
+	<Config
+		Name="Release"
+		OutputFile="">
+		<Includes>
+			<Include Dir="%(INCLUDE)"/>
+		</Includes>
+		<Menu>
+			<Target
+				Name="Compile"
+				MenuCaption="&amp;Compile"
+				CaptureOutputWith="ProcessBuffer"
+				SaveOption="SaveCurrent"
+				RunFromDir="%rw">
+				<Exec CmdLine='vstudiocompile "%f"'/>
+			</Target>
+			<Target
+				Name="Build"
+				MenuCaption="&amp;Build"
+				CaptureOutputWith="ProcessBuffer"
+				SaveOption="SaveWorkspaceFiles"
+				RunFromDir="%rw">
+				<Exec CmdLine='devenv "%w" /build "%b" /project "%rm"'/>
+			</Target>
+			<Target
+				Name="Rebuild"
+				MenuCaption="&amp;Rebuild"
+				CaptureOutputWith="ProcessBuffer"
+				SaveOption="SaveWorkspaceFiles"
+				RunFromDir="%rw">
+				<Exec CmdLine='devenv "%rm" /rebuild "%b"'/>
+			</Target>
+			<Target
+				Name="Debug"
+				MenuCaption="&amp;Debug"
+				SaveOption="SaveNone"
+				RunFromDir="%rw">
+				<Exec CmdLine='devenv "%w"'/>
+			</Target>
+			<Target
+				Name="Execute"
+				MenuCaption="E&amp;xecute"
+				SaveOption="SaveNone"
+				RunFromDir="%rw">
+				<Exec CmdLine='"%boVampire.exe"'/>
+			</Target>
+			<Target
+				Name="Resource Editor"
+				MenuCaption="Resource Editor"
+				ShowOnMenu="HideIfNoCmdLine"
+				SaveOption="SaveWorkspaceFiles"
+				RunFromDir="%rw">
+				<Exec CmdLine="devenv"/>
+			</Target>
+			<Target
+				Name="Build Solution"
+				MenuCaption="Build Solution"
+				ShowOnMenu="HideIfNoCmdLine"
+				CaptureOutputWith="ProcessBuffer"
+				SaveOption="SaveWorkspaceFiles"
+				RunFromDir="%rw">
+				<Exec CmdLine='devenv "%w" /build "%b"'/>
+			</Target>
+			<Target
+				Name="Clean Solution"
+				MenuCaption="Clean Solution"
+				CaptureOutputWith="ProcessBuffer"
+				SaveOption="SaveNone"
+				RunFromDir="%rw">
+				<Exec CmdLine='devenv "%w" /clean %b'/>
+			</Target>
+			<Target
+				Name="Clean Project"
+				MenuCaption="Clean Project"
+				CaptureOutputWith="ProcessBuffer"
+				SaveOption="SaveNone"
+				RunFromDir="%rw">
+				<Exec CmdLine='devenv "%rp%rn.vcproj" /clean %b'/>
+			</Target>
+		</Menu>
+	</Config>
+	<Files>
+		<Folder
+			Name="Source Files"
+			Filters="*.c;*.C;*.cc;*.cpp;*.cp;*.cxx;*.prg;*.pas;*.dpr;*.asm;*.s;*.bas;*.java;*.sc;*.e;*.cob;*.html;*.rc;*.tcl;*.py;*.pl">
+			<F N="ANTLRException.cpp"/>
+			<F N="assert.cpp"/>
+			<F N="ASTFactory.cpp"/>
+			<F N="ASTRefCount.cpp"/>
+			<F N="Atom.cpp"/>
+			<F N="BaseAST.cpp"/>
+			<F N="BitSet.cpp"/>
+			<F N="CharBuffer.cpp"/>
+			<F N="CharScanner.cpp"/>
+			<F N="Clause.cpp"/>
+			<F N="client.pl"/>
+			<F N="CommonAST.cpp"/>
+			<F N="CommonToken.cpp"/>
+			<F N="DLexer.cpp"/>
+			<F N="DLexerBase.cpp"/>
+			<F N="DLGLexer.cpp"/>
+			<F N="Dump.cpp"/>
+			<F N="Formula.cpp"/>
+			<F N="Inference.cpp"/>
+			<F N="InputBuffer.cpp"/>
+			<F N="Int.cpp"/>
+			<F N="IntNameTable.cpp"/>
+			<F N="KIFLexer.cpp"/>
+			<F N="KIFParser.cpp"/>
+			<F N="LexerSharedInputState.cpp"/>
+			<F N="ListSubstitution.cpp"/>
+			<F N="Literal.cpp"/>
+			<F N="LLkParser.cpp"/>
+			<F N="Map.cpp"/>
+			<F N="Memory.cpp"/>
+			<F N="Miniscope.cpp"/>
+			<F N="MismatchedCharException.cpp"/>
+			<F N="MismatchedTokenException.cpp"/>
+			<F N="NoViableAltException.cpp"/>
+			<F N="NoViableAltForCharException.cpp"/>
+			<F N="Options.cpp"/>
+			<F N="Output.cpp"/>
+			<F N="Parser.cpp"/>
+			<F N="ParserSharedInputState.cpp"/>
+			<F N="primes.cpp"/>
+			<F N="Problem.cpp"/>
+			<F N="Query.cpp"/>
+			<F N="Random.cpp"/>
+			<F N="RecognitionException.cpp"/>
+			<F N="Refutation.cpp"/>
+			<F N="Renaming.cpp"/>
+			<F N="server.pl"/>
+			<F N="server1.pl"/>
+			<F N="server_copy.pl"/>
+			<F N="Signature.cpp"/>
+			<F N="Statistics.cpp"/>
+			<F N="String.cpp"/>
+			<F N="Substitution.cpp"/>
+			<F N="SymCounter.cpp"/>
+			<F N="Tabulate.cpp"/>
+			<F N="Term.cpp"/>
+			<F N="Token.cpp"/>
+			<F N="TokenBuffer.cpp"/>
+			<F N="TokenStreamSelector.cpp"/>
+			<F N="TPTPLexer.cpp"/>
+			<F N="TPTPLexer.java"/>
+			<F N="TPTPLexerTokenTypes.java"/>
+			<F N="TPTPParser.cpp"/>
+			<F N="TPTPParser.java"/>
+			<F N="Tracer.cpp"/>
+			<F N="Unit.cpp"/>
+			<F N="vampire.cpp"/>
+			<F N="Var.cpp"/>
+			<F N="XMLLexer.cpp"/>
+			<F N="XMLParser.cpp"/>
+		</Folder>
+		<Folder
+			Name="Header Files"
+			Filters="*.h;*.H;*.hh;*.hpp;*.hxx;*.inc;*.sh;*.cpy;*.if">
+			<F N="assert.hpp"/>
+			<F N="Atom.hpp"/>
+			<F N="Chain.hpp"/>
+			<F N="Clause.hpp"/>
+			<F N="Dump.hpp"/>
+			<F N="Formula.hpp"/>
+			<F N="Inference.hpp"/>
+			<F N="Int.hpp"/>
+			<F N="IntNameTable.hpp"/>
+			<F N="KIFLexer.hpp"/>
+			<F N="KIFLexerTokenTypes.hpp"/>
+			<F N="KIFParser.hpp"/>
+			<F N="List.hpp"/>
+			<F N="Lists.hpp"/>
+			<F N="ListSubstitution.hpp"/>
+			<F N="Literal.hpp"/>
+			<F N="Lst.hpp"/>
+			<F N="Map.hpp"/>
+			<F N="Memory.hpp"/>
+			<F N="Miniscope.hpp"/>
+			<F N="Options.hpp"/>
+			<F N="Output.hpp"/>
+			<F N="Pair.hpp"/>
+			<F N="Position.hpp"/>
+			<F N="Problem.hpp"/>
+			<F N="Query.hpp"/>
+			<F N="Random.hpp"/>
+			<F N="Refutation.hpp"/>
+			<F N="Renaming.hpp"/>
+			<F N="Signature.hpp"/>
+			<F N="Sort.hpp"/>
+			<F N="Statistics.hpp"/>
+			<F N="Substitution.hpp"/>
+			<F N="SymCounter.hpp"/>
+			<F N="Tabulate.hpp"/>
+			<F N="Term.hpp"/>
+			<F N="TPTPLexer.hpp"/>
+			<F N="TPTPLexerTokenTypes.hpp"/>
+			<F N="TPTPParser.hpp"/>
+			<F N="Tracer.hpp"/>
+			<F N="Unit.hpp"/>
+			<F N="Var.hpp"/>
+			<F N="XMLLexer.hpp"/>
+			<F N="XMLLexerTokenTypes.hpp"/>
+			<F N="XMLParser.hpp"/>
+		</Folder>
+		<Folder
+			Name="Resource Files"
+			Filters="*.ico;*.cur;*.dlg"/>
+		<Folder
+			Name="Bitmaps"
+			Filters="*.bmp"/>
+		<Folder
+			Name="Other Files"
+			Filters="">
+			<F N="assert.o"/>
+			<F N="Atom.o"/>
+			<F N="Clause.o"/>
+			<F N="Dump.o"/>
+			<F N="Formula.o"/>
+			<F N="history"/>
+			<F N="Inference.o"/>
+			<F N="insert_lgpl"/>
+			<F N="Int.o"/>
+			<F N="IntNameTable.o"/>
+			<F N="KIF.g"/>
+			<F N="KIFLexer.o"/>
+			<F N="KIFLexerTokenTypes.txt"/>
+			<F N="KIFParser.o"/>
+			<F N="kif"/>
+			<F N="lgpl.txt"/>
+			<F N="Literal.o"/>
+			<F N="Makefile.am"/>
+			<F N="Makefile.in"/>
+			<F
+				N="makefile"
+				Type="Makefile"/>
+			<F N="Map.o"/>
+			<F N="Memory.o"/>
+			<F N="Merge.txt"/>
+			<F N="Miniscope.o"/>
+			<F N="Options.o"/>
+			<F N="Output.o"/>
+			<F N="Problem.o"/>
+			<F N="Query.o"/>
+			<F N="Random.o"/>
+			<F N="Refutation.o"/>
+			<F N="server_infer.jar"/>
+			<F N="Signature.o"/>
+			<F N="Statistics.o"/>
+			<F N="Substitution.o"/>
+			<F N="SymCounter.o"/>
+			<F N="Tabulate.o"/>
+			<F N="Term.o"/>
+			<F N="test.out"/>
+			<F N="TPTP.g"/>
+			<F N="TPTPLexer.o"/>
+			<F N="TPTPLexerTokenTypes.txt"/>
+			<F N="TPTPParser.o"/>
+			<F N="Tracer.o"/>
+			<F N="Unit.o"/>
+			<F N="vampire.syntax"/>
+			<F N="Vampire.vpj"/>
+			<F N="Vampire.vpw"/>
+			<F N="Vampire.vpwhist"/>
+			<F N="vampire.zip"/>
+			<F N="VampireProofMacros.tex"/>
+			<F N="Var.o"/>
+			<F N="XML.g"/>
+			<F N="XMLLexer.o"/>
+			<F N="XMLLexerTokenTypes.txt"/>
+			<F N="XMLParser.o"/>
+		</Folder>
+	</Files>
+</Project>

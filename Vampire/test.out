@@ -1,0 +1,250 @@
+<assertionResponse>
+  Formula has been added to the session database
+</assertionResponse>
+<assertionResponse>
+  Formula has been added to the session database
+</assertionResponse>
+<queryResponse>
+  <answer result='yes' number='1'>
+    <proof>
+      <proofStep>
+        <premises>
+        </premises>
+        <conclusion>
+          <formula number='2929'>
+            (=> (mother ?X193 ?X195)
+                (attribute ?X195 Female))
+          </formula>
+        </conclusion>
+      </proofStep>
+      <proofStep>
+        <premises>
+          <premise>
+            <formula number='2929'>
+              (=> (mother ?X193 ?X195)
+                  (attribute ?X195 Female))
+            </formula>
+          </premise>
+        </premises>
+        <conclusion>
+          <clause number='9744'>
+            (or (attribute ?X1 Female)
+                (not (mother ?X0 ?X1)))
+          </clause>
+        </conclusion>
+      </proofStep>
+      <proofStep>
+        <premises>
+        </premises>
+        <conclusion>
+          <formula number='9722'>
+            (mother Bar-Child Foo-Mom)
+          </formula>
+        </conclusion>
+      </proofStep>
+      <proofStep>
+        <premises>
+          <premise>
+            <formula number='9722'>
+              (mother Bar-Child Foo-Mom)
+            </formula>
+          </premise>
+        </premises>
+        <conclusion>
+          <clause number='9729'>
+            (mother Bar-Child Foo-Mom)
+          </clause>
+        </conclusion>
+      </proofStep>
+      <proofStep>
+        <premises>
+          <premise>
+            <clause number='9744'>
+              (or (attribute ?X1 Female)
+                  (not (mother ?X0 ?X1)))
+            </clause>
+          </premise>
+          <premise>
+            <clause number='9729'>
+              (mother Bar-Child Foo-Mom)
+            </clause>
+          </premise>
+        </premises>
+        <conclusion>
+          <clause number='9745'>
+            (attribute Foo-Mom Female)
+          </clause>
+        </conclusion>
+      </proofStep>
+      <proofStep>
+        <premises>
+        </premises>
+        <conclusion>
+          <formula number='3603'>
+            (contraryAttribute Male Female)
+          </formula>
+        </conclusion>
+      </proofStep>
+      <proofStep>
+        <premises>
+          <premise>
+            <formula number='3603'>
+              (contraryAttribute Male Female)
+            </formula>
+          </premise>
+        </premises>
+        <conclusion>
+          <clause number='5629'>
+            (contraryAttribute Male Female)
+          </clause>
+        </conclusion>
+      </proofStep>
+      <proofStep>
+        <premises>
+        </premises>
+        <conclusion>
+          <formula number='97'>
+            (=> (and (attribute ?X16 ?X17)
+                     (contraryAttribute ?X17 ?X18))
+                (not (attribute ?X16 ?X18)))
+          </formula>
+        </conclusion>
+      </proofStep>
+      <proofStep>
+        <premises>
+          <premise>
+            <formula number='97'>
+              (=> (and (attribute ?X16 ?X17)
+                       (contraryAttribute ?X17 ?X18))
+                  (not (attribute ?X16 ?X18)))
+            </formula>
+          </premise>
+        </premises>
+        <conclusion>
+          <clause number='9746'>
+            (or (not (attribute ?X0 ?X2))
+                (not (contraryAttribute ?X1 ?X2))
+                (not (attribute ?X0 ?X1)))
+          </clause>
+        </conclusion>
+      </proofStep>
+      <proofStep>
+        <premises>
+        </premises>
+        <conclusion>
+          <formula number='2935'>
+            (=> (father ?X193 ?X196)
+                (attribute ?X196 Male))
+          </formula>
+        </conclusion>
+      </proofStep>
+      <proofStep>
+        <premises>
+          <premise>
+            <formula number='2935'>
+              (=> (father ?X193 ?X196)
+                  (attribute ?X196 Male))
+            </formula>
+          </premise>
+        </premises>
+        <conclusion>
+          <clause number='9747'>
+            (or (attribute ?X1 Male)
+                (not (father ?X0 ?X1)))
+          </clause>
+        </conclusion>
+      </proofStep>
+      <proofStep>
+        <premises>
+        </premises>
+        <conclusion>
+          <formula number='9724'>
+            (not (not (father Bar-Child Foo-Mom)))
+          </formula>
+        </conclusion>
+      </proofStep>
+      <proofStep>
+        <premises>
+          <premise>
+            <formula number='9724'>
+              (not (not (father Bar-Child Foo-Mom)))
+            </formula>
+          </premise>
+        </premises>
+        <conclusion>
+          <clause number='9748'>
+            (father Bar-Child Foo-Mom)
+          </clause>
+        </conclusion>
+      </proofStep>
+      <proofStep>
+        <premises>
+          <premise>
+            <clause number='9747'>
+              (or (attribute ?X1 Male)
+                  (not (father ?X0 ?X1)))
+            </clause>
+          </premise>
+          <premise>
+            <clause number='9748'>
+              (father Bar-Child Foo-Mom)
+            </clause>
+          </premise>
+        </premises>
+        <conclusion>
+          <clause number='9749'>
+            (attribute Foo-Mom Male)
+          </clause>
+        </conclusion>
+      </proofStep>
+      <proofStep>
+        <premises>
+          <premise>
+            <clause number='9746'>
+              (or (not (attribute ?X0 ?X2))
+                  (not (contraryAttribute ?X1 ?X2))
+                  (not (attribute ?X0 ?X1)))
+            </clause>
+          </premise>
+          <premise>
+            <clause number='9749'>
+              (attribute Foo-Mom Male)
+            </clause>
+          </premise>
+        </premises>
+        <conclusion>
+          <clause number='9750'>
+            (or (not (contraryAttribute Male ?X0))
+                (not (attribute Foo-Mom ?X0)))
+          </clause>
+        </conclusion>
+      </proofStep>
+      <proofStep>
+        <premises>
+          <premise>
+            <clause number='9745'>
+              (attribute Foo-Mom Female)
+            </clause>
+          </premise>
+          <premise>
+            <clause number='5629'>
+              (contraryAttribute Male Female)
+            </clause>
+          </premise>
+          <premise>
+            <clause number='9750'>
+              (or (not (contraryAttribute Male ?X0))
+                  (not (attribute Foo-Mom ?X0)))
+            </clause>
+          </premise>
+        </premises>
+        <conclusion>
+          <clause number='9751'>
+            FALSE
+          </clause>
+        </conclusion>
+      </proofStep>
+    </proof>
+  </answer>
+  <summary proofs='1'/>
+</queryResponse>

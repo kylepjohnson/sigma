@@ -1,0 +1,8 @@
+02/10/2002
+
+The implementation of renaming changed using maps. File Renaming.cpp
+is removed.
+
+Class Substitution changed to ListSubstitution
+
+Class Substitution based on maps is introduced

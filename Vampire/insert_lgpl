@@ -1,0 +1,15 @@
+#!/usr/bin/perl
+
+use strict;
+
+my $insert = "lgpl.txt";
+my $tmp = "tmp";
+
+sub insert {
+  foreach my $file (<*.?pp>) {
+    system "cat $insert $file > $tmp"; # or die "cannot copy file $file";
+    system "mv $tmp $file"; # or die "cannot move file $file";
+  }
+}
+
+insert();

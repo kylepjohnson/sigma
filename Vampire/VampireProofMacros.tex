@@ -1,0 +1,24 @@
+\newenvironment{VampireProof}{%
+	\section{Proof}}{}
+\newenvironment{VampireInference}{%
+	\begin{array}{ll}}{\end{array}}
+\newenvironment{VampireInferencePremises}{}{}
+\newenvironment{VampirePremise}%
+	{\begin{array}{l}}%
+	{\end{array}}
+\newenvironment{VampireConclusion}%
+	{\begin{array}{l}}%
+	{\end{array}}
+\newcommand{\VampireUnit}[3]{%
+	#1.~#2~[#3]}
+
+\newcommand{\VPremiseSeparator}{; \\}
+\newcommand{\VConclusionSeparator}{\\ \longrightarrow \\}
+
+\newcommand{\Vor}{\vee}
+\newcommand{\Vand}{\wedge}
+\newcommand{\Vimp}{\supset}
+\newcommand{\Viff}{\equiv}
+\newcommand{\Vxor}{\not\equiv}
+
+\newcommand{\VEmptyClause}{\Box}

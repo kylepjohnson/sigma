@@ -1,0 +1,109 @@
+29.11.2002
+all instance retrieval implementations made consistent
+with the changes that were done to compile Vampire kernel by VC++ 6.0
+===> Gematogen 0.18 is upgraded to 0.19 
+
+29.11.2002
+new style standard library headers
+===> Gematogen 0.17 is upgraded to 0.18
+
+21.11.2002
+Bug fix in PathIndexingWithJoinsAndEarlyCleanUpForInstanceRetrieval.hpp
++
+PathIndexingWithJoinsAndEarlyAndCompiledCleanUpForInstanceRetrieval.hpp
+added
+===> Gematogen 0.16 is upgraded to 0.17
+
+
+17.11.2002
+Cosmetic changes (file and class names) + a few unfinished drafts
+===> Gematogen 0.15 is upgraded to 0.16
+
+05.02.2002
+
+InstanceRetrievalWithStandardPathIndex.h added
+===> Gematogen 0.14 is upgraded to 0.15
+
+25.12.2001
+
+ForwardMatchingIndex<..> freed from MaxNumOfFunctors
+by replacing the top level array by an extendable one.
+
+===> Gematogen 0.13 is upgraded to 0.14
+
+28.11.2001
+
+BlodKorv 0.07 upgraded to 0.08
+
+===> Gematogen 0.12 is upgraded to 0.13
+
+17.10.2001
+InstanceRetrievalWithOptimisedPathIndexAndEarlySubstFactoring.h
+is slighltly improved (more instructions are merged)
+===> Gematogen 0.11 is upgraded to 0.12
+
+
+16.10.2001
+
+InstanceRetrievalWithOptimisedPathIndexAndEarlySubstFactoring.h
+added
+===> Gematogen 0.1 is upgraded to 0.11
+
+10.10.2001
+
+CompiledInstanceRetrievalWithPathIndex.h added
+===> Gematogen 0.09 is upgraded to 0.1
+
+08.10.2001
+
+Weight- and signature-filters are added to
+InstanceRetrievalWithOptimisedPathIndex.h
+===> Gematogen 0.08 is upgraded to 0.09
+
+
+26.09.2001
+
+InstanceRetrievalWithPathIndex.h, OptimisedPathIndex.h and
+InstanceRetrievalWithOptimisedPathIndex.h are added
++
+BlodKorv 0.06 upgraded to 0.07
+===> Gematogen 0.07 is upgraded to 0.08
+
+31.07.2001
+
+PathIndex.h added
+===> Gematogen 0.06 is upgraded to 0.07
+
+09.05.2001
+
+Upgrade of BlodKorv to 0.06 from 0.05 
+===> Gematogen 0.05 is upgraded to 0.06
+
+24.04.2001
+
+Upgrade of BlodKorv to 0.05 from 0.04 
+===> Gematogen 0.04 is upgraded to 0.05
+
+17.04.2001
+
+Upgrade of BlodKorv to 0.04 from 0.03 
+===> Gematogen 0.03 is upgraded to 0.04
+
+14.04.2001
+
+Upgrade of BlodKorv to 0.03 from 0.02 
+===> Gematogen 0.02 is upgraded to 0.03
+
+17.03.2001 
+
+Upgrade of BlodKorv to 0.02 from 0.01 ===> Gematogen 0.01 is upgraded
+to 0.02
+
+31.01.2001
+Upgrade of BlodKorv to 0.01 from 0.0 ===> Gematogen 0.0 is upgraded
+to 0.01 
+
+25.01.2001
+Gematogen 0.0 has been separated from the Vampire 1.17 Hell library.  
+Gematogen 0.0 contains implementation of code trees for 
+forward matching. 

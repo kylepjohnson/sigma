@@ -1,0 +1,6 @@
+fun output (p:proof) =
+	"2222
+	outputLines (p.lines)
+;
+
+fun outputLines

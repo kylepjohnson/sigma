@@ -1,0 +1,35 @@
+// $ANTLR 2.7.1: TPTP.g -> TPTPLexerTokenTypes.txt$
+TPTPLexer    // output token vocab name
+UPPER=4
+LOWER=5
+DIGIT=6
+WHITE=7
+NUMBER=8
+WORDCHAR=9
+CHARACTER=10
+SKIP_RULE=11
+COMMENT_LINE=12
+QUOTE=13
+FILE_NAME=14
+LPAR=15
+RPAR=16
+LBRA=17
+RBRA=18
+COMMA=19
+COLON=20
+DOT=21
+AND=22
+NOT=23
+OR=24
+IFF=25
+IMP=26
+XOR=27
+FORALL=28
+EXISTS=29
+PP=30
+MM=31
+NAME=32
+VAR=33
+LITERAL_input_formula="input_formula"=34
+LITERAL_input_clause="input_clause"=35
+LITERAL_include="include"=36
