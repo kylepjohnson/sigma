@@ -866,10 +866,11 @@ void KIFOutput::formula (const Formula& f, int indent)
 
 // output connective in the KIF syntax
 // 21/10/2002 Tbilisi
+// POD 2004.08.02 ensure proper xml
 void KIFOutput::connective (Formula::Connective con) 
 {
   static const char* names [] =
-    { "", "and", "or", "=>", "<=>", "", "not", "forall", "exists"};
+    { "", "and", "or", "=&gt;", "&lt;=&gt;", "", "not", "forall", "exists"};
 
   _stream << names[(int)con];
 } // KIFOutput::connective
@@ -878,8 +879,7 @@ void KIFOutput::connective (Formula::Connective con)
 // print lengths of connectives in the KIF syntax
 // 21/10/2002 Tbilisi
 int KIFOutput::_connectivePrintLength [] =
-    { 0, 3, 2, 2, 3, 0, 3, 6, 6};
-
+  { 0, 3, 2, 5, 9, 0, 3, 6, 6};
 
 // output a variable in the KIF syntax
 // 21/10/2002 Tbilisi
@@ -891,9 +891,15 @@ void KIFOutput::var (Var v)
 
 // output atom in the KIF syntax
 // 21/10/2002 Tbilisi
+// POD 2004.08.02 ensure proper xml
 void KIFOutput::atom (const Atom& a)
 {
-  _stream << '(' << a.functor() << ' ';
+  const char* funct =  a.functor()->name();
+  if      (!strcmp(funct,"<="))  _stream << "(&lt;= ";
+  else if (!strcmp(funct,">="))  _stream << "(&gt;= ";
+  else if (!strcmp(funct,"<"))   _stream << "(&lt; ";
+  else if (!strcmp(funct,">"))   _stream << "(&gt; ";
+  else _stream << '(' << a.functor() << ' ';
   terms (a.args());
   _stream << ')';
 } // KIFOutput::atom 
