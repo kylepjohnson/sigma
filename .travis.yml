@@ -4,6 +4,7 @@ jdk:
   - oraclejdk8
 
 install:
+  - cd sigma
   - mvn install -DskipTests=true
 
 notifications:
