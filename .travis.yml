@@ -6,5 +6,8 @@ jdk:
 install:
   - mvn install -DskipTests=true
 
+post_install:
+  - sigma/install.sh
+
 notifications:
   email: false
