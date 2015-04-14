@@ -5,9 +5,10 @@ jdk:
 
 install:
   - cd sigma
+  - # works?
   - sigma/install.sh
-  # - mvn install -DskipTests=true
-  - mvn install -DskipTests=false
+  # this works:
+  # - mvn install -DskipTests=false
 
 notifications:
   email: false
