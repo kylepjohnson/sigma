@@ -5,12 +5,9 @@ jdk:
 
 install:
   - cd sigma
+  - sigma/install.sh
   # - mvn install -DskipTests=true
   - mvn install -DskipTests=false
-
-post_install:
-  - chmod +x sigma/install.sh
-  - sigma/install.sh
 
 notifications:
   email: false
