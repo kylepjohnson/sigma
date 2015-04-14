@@ -9,6 +9,7 @@ install:
   - mvn install -DskipTests=false
 
 post_install:
+  - chmod +x sigma/install.sh
   - sigma/install.sh
 
 notifications:
