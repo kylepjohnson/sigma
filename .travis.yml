@@ -6,6 +6,7 @@ jdk:
 install:
   - cd sigma
   - # works?
+  - chmod +x sigma/install.sh
   - sigma/install.sh
   # this works:
   # - mvn install -DskipTests=false
