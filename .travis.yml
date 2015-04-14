@@ -4,7 +4,9 @@ jdk:
   - oraclejdk8
 
 install:
-  - mvn install -DskipTests=true
+  - cd sigma
+  # - mvn install -DskipTests=true
+  - mvn install -DskipTests=false
 
 post_install:
   - sigma/install.sh
